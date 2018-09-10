@@ -15,8 +15,8 @@ if ($count) {
     $sql = 'INSERT INTO customer (name,email,tel,street,hose_num,corp,room,floor,
                                    comments,change_requered,card_payment,do_not_call) 
             VALUES(:name,:email,:tel,:street,:hose_num,:corp,:room,:floor,:comments,:change_requered,:card_payment,:do_not_call)';
-    $stmt = $pdo -> prepare($sql);
-    $stmt -> execute(['name' => $_POST["name"],
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['name' => $_POST["name"],
             'email' => $_POST["email"],
             'tel' => $_POST["phone"],
             'street' => $_POST["street"],
